@@ -1,3 +1,5 @@
+import jenkins.model.Jenkins
+
 // Define your settings
 def githubOrganization = "your-github-organization" // Replace with your organization name
 def credentialId = "app-deployer" // Replace with your credential ID
