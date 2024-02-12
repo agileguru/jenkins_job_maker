@@ -85,9 +85,9 @@ def buildMultiBranchJob(jobName, jobVCS, credentials, desc, display, scmBase , s
         branchSources {
             branchSource {
                 source {
-                    git {
+                    github {
                         id(jobName + jobVCS)
-                        remote(jobVCS)
+                        repositoryUrl(jobVCS)
                         credentialsId(credentials)
                         traits {
                             gitHubBranchDiscovery {
