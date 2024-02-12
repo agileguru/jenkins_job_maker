@@ -83,6 +83,11 @@ def buildMultiBranchJob(jobName, jobVCS, credentials, desc, display, scmBase , s
         description(desc)
         displayName(display)
         
+        // triggers 
+        triggers {
+            githubPush()
+        }
+
         // Define source
         branchSources {
             branchSource {
