@@ -90,7 +90,9 @@ def buildMultiBranchJob(jobName, jobVCS, credentials, desc, display, scmBase , s
                         remote(jobVCS)
                         credentialsId(credentials)
                         traits {
-                            gitHubBranchDiscovery()
+                            gitHubBranchDiscovery {
+                                strategyId(1)
+                            }
                             wipeWorkspaceTrait()
                             browser {
                                 browser {
