@@ -11,9 +11,9 @@ Projects    :
             [ 
                   plugin        :   [
                     scmUrl  :   scmBase,    
-                    project :   "Development_Platform/_git/Plugins",
-                    desc    :   "Platform Plugin BOM" , 
-                    display :   "Platform Plugin BOM",
+                    project :   "graalvm_cloud_native",
+                    desc    :   "GraalVM Demo App" , 
+                    display :   "GraalVM Demo App",
                     cred    :   jenkinsCredentialId 
                 ]
             ]
@@ -90,10 +90,13 @@ def buildMultiBranchJob(jobName, jobVCS, credentials, desc, display, scmBase , s
                         remote(jobVCS)
                         credentialsId(credentials)
                         traits {
-                            branchDiscoveryTrait()
+                            gitHubBranchDiscovery()
                             wipeWorkspaceTrait()
-                            gitBrowserSCMSourceTrait {
+                            browser {
                                 browser {
+                                    github {
+                                        repoUrl(repoLink)
+                                    }
                                 }
                             }
                         }
