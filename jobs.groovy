@@ -1,5 +1,6 @@
 String jenkinsCredentialId = "app-deployer"
-String scmBase = "https://github.com/SONDOR-life/"
+String SCMORG  = "SONDOR-life"
+String scmBase = "https://github.com/" + SCMORG + "/"
 
 def viewJobDefn  = [
 Projects    :    
@@ -88,6 +89,9 @@ def buildMultiBranchJob(jobName, jobVCS, credentials, desc, display, scmBase , s
                     github {
                         id(jobName + jobVCS)
                         repositoryUrl(jobVCS)
+                        repoOwner(SCMORG)
+                        repository(jobVCS)
+                        configuredByUrl(true)
                         credentialsId(credentials)
                         traits {
                             gitHubBranchDiscovery {
