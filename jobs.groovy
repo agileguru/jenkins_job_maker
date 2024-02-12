@@ -89,9 +89,9 @@ def buildMultiBranchJob(jobName, jobVCS, credentials, desc, display, scmBase , s
                 source {
                     github {
                         id(jobName + jobVCS)
+                        repositoryUrl(jobVCS)
                         repoOwner(org)
                         repository(jobVCS)
-                        configuredByUrl(true)
                         credentialsId(credentials)
                         traits {
                             gitHubBranchDiscovery {
