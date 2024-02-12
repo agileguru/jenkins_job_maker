@@ -7,7 +7,7 @@ Projects    :
         Desc        :    "All Projects",
         Folders     :    
         [                                                                           
-            Libraries   : 
+            Demo   : 
             [ 
                   plugin        :   [
                     scmUrl  :   scmBase,    
