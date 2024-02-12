@@ -10,7 +10,7 @@ Projects    :
         [                                                                           
             Demo   : 
             [ 
-                  plugin        :   [
+                  graal        :   [
                     scmUrl  :   scmBase,    
                     project :   "graalvm_cloud_native",
                     desc    :   "GraalVM Demo App" , 
@@ -21,11 +21,22 @@ Projects    :
             ],
             Learn   : 
             [ 
-                  plugin        :   [
+                  wiki        :   [
                     scmUrl  :   scmBase,    
                     project :   "sondor-wikijs",
                     desc    :   "Learning Portal" , 
                     display :   "Learning Portal",
+                    cred    :   jenkinsCredentialId,
+                    org     :   SCMORG
+                ]
+            ],
+            Engage   : 
+            [ 
+                  discourse     :   [
+                    scmUrl  :   scmBase,    
+                    project :   "discourse_docker",
+                    desc    :   "Engage Portal" , 
+                    display :   "Engage Portal",
                     cred    :   jenkinsCredentialId,
                     org     :   SCMORG
                 ]
