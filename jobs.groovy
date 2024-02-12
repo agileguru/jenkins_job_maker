@@ -18,6 +18,17 @@ Projects    :
                     cred    :   jenkinsCredentialId,
                     org     :   SCMORG
                 ]
+            ],
+            Learn   : 
+            [ 
+                  plugin        :   [
+                    scmUrl  :   scmBase,    
+                    project :   "sondor-wikijs",
+                    desc    :   "Learning Portal" , 
+                    display :   "Learning Portal",
+                    cred    :   jenkinsCredentialId,
+                    org     :   SCMORG
+                ]
             ]
         ],
     ]
