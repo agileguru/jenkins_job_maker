@@ -6,7 +6,7 @@ def buildStatusViews  = [
         recurse :   true,
         regex   :   "^(?!.*RELEASE.*).*"
     ],
-    Master      :   [
+    Release      :   [
         name    :   "Released",
         desc    :   "Release Branches",
         recurse :   true,
