@@ -15,7 +15,8 @@ Projects    :
                     project :   "graalvm_cloud_native",
                     desc    :   "GraalVM Demo App" , 
                     display :   "GraalVM Demo App",
-                    cred    :   jenkinsCredentialId 
+                    cred    :   jenkinsCredentialId,
+                    org     :   SCMORG
                 ]
             ]
         ],
@@ -70,12 +71,12 @@ def buildJobs( data ) {
             jobDesc = jobDetails."desc"
             jobDisplayName = jobDetails."display"
             scmCred =  jobDetails."cred"
-            buildMultiBranchJob(jobName, jobVCS, scmCred, jobDesc, jobDisplayName, jobDetails."scmUrl", jobDetails."project", repoUrl)
+            buildMultiBranchJob(jobName, jobVCS, scmCred, jobDesc, jobDisplayName, jobDetails."scmUrl", jobDetails."project", repoUrl,jobDetails."org")
         }
     }
 }
 // Define method to build the job 
-def buildMultiBranchJob(jobName, jobVCS, credentials, desc, display, scmBase , scmProject, repoLink) {
+def buildMultiBranchJob(jobName, jobVCS, credentials, desc, display, scmBase , scmProject, repoLink, org) {
     // Create job
     multibranchPipelineJob(jobName) {
         // Desc  and Display name 
@@ -89,7 +90,7 @@ def buildMultiBranchJob(jobName, jobVCS, credentials, desc, display, scmBase , s
                     github {
                         id(jobName + jobVCS)
                         repositoryUrl(jobVCS)
-                        repoOwner(SCMORG)
+                        repoOwner(org)
                         repository(jobVCS)
                         configuredByUrl(true)
                         credentialsId(credentials)
