@@ -1,5 +1,5 @@
 String jenkinsCredentialId = "app-deployer"
-String SCMORG  = "SONDOR-life"
+String SCMORG  = "agileguru"
 String scmBase = "https://github.com/" + SCMORG + "/"
 
 def viewJobDefn  = [
@@ -19,28 +19,6 @@ Projects    :
                     org     :   SCMORG
                 ]
             ],
-            Learn   : 
-            [ 
-                  wiki        :   [
-                    scmUrl  :   scmBase,    
-                    project :   "sondor-wikijs",
-                    desc    :   "Learning Portal" , 
-                    display :   "Learning Portal",
-                    cred    :   jenkinsCredentialId,
-                    org     :   SCMORG
-                ]
-            ],
-            Engage   : 
-            [ 
-                  discourse     :   [
-                    scmUrl  :   scmBase,    
-                    project :   "discourse_docker",
-                    desc    :   "Engage Portal" , 
-                    display :   "Engage Portal",
-                    cred    :   jenkinsCredentialId,
-                    org     :   SCMORG
-                ]
-            ]
         ],
     ]
 ] 
