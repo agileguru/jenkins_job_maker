@@ -20,7 +20,25 @@ Projects    :
                 ]
             ],
         ],
-    ]
+    ],
+Tools    :    
+    [ 
+        Desc        :    "All Tools",
+        Folders     :    
+        [                                                                           
+            Maven   : 
+            [ 
+                  graal        :   [
+                    scmUrl  :   scmBase,    
+                    project :   "Maven",
+                    desc    :   "Maven Build Tool" , 
+                    display :   "Maven Build Tool",
+                    cred    :   jenkinsCredentialId,
+                    org     :   SCMORG
+                ]
+            ],
+        ],
+    ]    
 ] 
 
 // Don't change unless you know what you doing             
