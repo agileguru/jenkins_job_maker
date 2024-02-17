@@ -1,13 +1,13 @@
 def buildStatusViews  = [
 
     Development :   [
-        name    :   "Build Monitor -> Work-In-Progress",
+        name    :   "Build Monitor - Work-In-Progress",
         desc    :   "Development / Feature Branches",
         recurse :   true,
         regex   :   "^(?!.*RELEASE.*).*"
     ],
     Release      :   [
-        name    :   "Build Monitor -> Released",
+        name    :   "Build Monitor - Released",
         desc    :   "Release Branches",
         recurse :   true,
         regex   :   ".*RELEASE.*\$"
