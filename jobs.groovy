@@ -28,7 +28,7 @@ Tools    :
         [                                                                           
             Maven   : 
             [ 
-                  graal        :   [
+                  Maven        :   [
                     scmUrl  :   scmBase,    
                     project :   "Maven",
                     desc    :   "Maven Build Tool" , 
@@ -37,6 +37,17 @@ Tools    :
                     org     :   SCMORG
                 ]
             ],
+            BaseImages   : 
+            [ 
+                  baseimages        :   [
+                    scmUrl  :   scmBase,    
+                    project :   "baseimages",
+                    desc    :   "Base Images For Apps" , 
+                    display :   "Base Images For Apps",
+                    cred    :   jenkinsCredentialId,
+                    org     :   SCMORG
+                ]
+            ],            
         ],
     ]    
 ] 
