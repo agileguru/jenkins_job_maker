@@ -42,6 +42,9 @@ Jenkins provides a powerful Groovy-based Domain Specific Language (DSL) that all
     ]
 ```
 
+<br/><br/>
+
+## Notes ...
 1. Line number 1 defines the credential-id for authentication for the git repositories.
 2. Line number 2 defines the Github user / organisation as the source of git repositories for job creation.
 3. Line 5 onwards till line 55 is the place where you need to define your Folder structure and repository details for you to manage.
