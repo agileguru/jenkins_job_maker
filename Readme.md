@@ -70,4 +70,4 @@ https://tech.agileguru.org/posts/devops/automate-jenkins-jobs-gitops.html
 
 ## License and Legal information ... 
 
-This software is provided on an "As-is" basis. You can fork / clone and do what you want with it. I will not be responsible of you make a mistake. I will not be providing free support for you to implement this.
+This software is provided on an "As-is" basis. You can fork / clone and do what you want with it. I will not be responsible if you make a mistake. I will not be providing free support for you to implement this.
